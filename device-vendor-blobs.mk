@@ -9,6 +9,9 @@ PRODUCT_COPY_FILES += $(shell find vendor/amlogic/proprietary/bin -name '*' -pri
 # apps
 PRODUCT_COPY_FILES += $(shell find vendor/amlogic/proprietary/app -name '*' -printf '%p:system/app/%f ')
 
+# firmware files for codecs
+PRODUCT_COPY_FILES += $(shell find vendor/amlogic/proprietary/etc/firmware -name '*' -printf '%p:system/etc/firmware/%f ')
+
 # alsa
 PRODUCT_COPY_FILES += $(shell find vendor/amlogic/proprietary/usr/share/alsa/ -name '*' -printf '%p:system/usr/share/alsa/%f ')
 PRODUCT_COPY_FILES += $(shell find vendor/amlogic/proprietary/usr/share/alsa/cards -name '*' -printf '%p:system/usr/share/alsa/cards/%f ')
